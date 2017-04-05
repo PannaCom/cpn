@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>@Html.Raw(ViewBag.title)</title>
+    <meta name="description" content="@Html.Raw(ViewBag.des)">
+    <meta name="keywords" content="@Html.Raw(ViewBag.keywords)">
+    <meta name="author" content="marketingol.net">
+
+    <!-- Meta property -->
+    <meta property="og:title" content="@Html.Raw(ViewBag.title)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="marketingol.net" />
+    <meta property="og:url" content="@Html.Raw(ViewBag.url)" />
+    <meta property="og:description" content="@Html.Raw(ViewBag.des)" />
+    <meta property="og:image" itemprop="thumbnailUrl" content="@ViewBag.image" />
+    <meta property="fb:admins" content="100006557590947" />
+    <link rel="canonical" href="@ViewBag.url" />
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/Content/MDBFree/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/Content/MDBFree/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="/Content/MDBFree/css/style.css" rel="stylesheet">
+    @RenderSection("Styles", required: false)
+
+    <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-85965189-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+
+</head>
+
+<body>
+
+
+    @RenderBody()
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="/Content/MDBFree/js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/Content/MDBFree/js/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/Content/MDBFree/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/Content/MDBFree/js/mdb.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>
